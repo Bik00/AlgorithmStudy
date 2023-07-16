@@ -2,6 +2,7 @@ package com.example.algorithmstudy.sort;
 
 import com.example.algorithmstudy.component.factory.start.ConstantBeanName;
 import com.example.algorithmstudy.component.factory.start.StartMethodFactory;
+import com.example.algorithmstudy.vo.request.InputRequest;
 import lombok.NoArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -11,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Component(value = ConstantBeanName.HEAP_SORT)
 public class HeapSort  implements StartMethodFactory {
     @Override
-    public void execute() throws Exception {
+    public void execute(InputRequest request) throws Exception {
         log.info("힙 정렬 실행");
     }
 }
