@@ -1,20 +1,16 @@
 package com.example.algorithmstudy.component.factory.start;
 
-import com.example.algorithmstudy.sort.example.Example;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import java.util.Map;
 
 @Component
-public class StartSelector implements StartFactory {
+@RequiredArgsConstructor
+public class StartSelector  {
 
-    @Override
-    public StartMethodFactory createFactory(StartMethod method) {
+    private final Map<String, StartMethodFactory> maps;
 
-        StartMethodFactory factory = null;
-
-        switch(method) {
-            case EXAMPLE : factory = new Example();
-        }
-
-        return factory;
+    public void select(String method) throws Exception {
+        maps.get(method).execute();
     }
 }
