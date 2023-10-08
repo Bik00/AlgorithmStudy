@@ -31,3 +31,7 @@
 * 보고보고 정렬(Bogobogo sort)
 * 대기 정렬(Sleep sort)
 * 중력 정렬(Gravity sort)
+
+---
+
+추가 알고리즘 계획 구상중
